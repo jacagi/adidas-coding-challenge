@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>subscriptionservice-api-rest</artifactId>
 	<name>${project.groupId}:${project.artifactId}</name>
-	
+	<packaging>jar</packaging>
 	<dependencies>
 
 		<dependency>
@@ -23,6 +23,28 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+      		<groupId>io.swagger</groupId>
+      		<artifactId>swagger-annotations</artifactId>
+    	</dependency>
+    	<dependency>
+      		<groupId>io.swagger.core.v3</groupId>
+      		<artifactId>swagger-core</artifactId>
+    	</dependency>
+    	
+		<dependency>
+			<groupId>io.swagger.parser.v3</groupId>
+			<artifactId>swagger-parser</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.openapitools</groupId>
+			<artifactId>openapi-generator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+		</dependency>
 	</dependencies>
-
+	
 </project>

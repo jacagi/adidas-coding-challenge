@@ -12,6 +12,16 @@
 	<artifactId>subscriptionservice</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<properties>
+    	<mapstruct.version>1.4.2.Final</mapstruct.version>
+    	<swagger-anotation.version>1.5.22</swagger-anotation.version>
+    	<swagger-core.version>2.1.11</swagger-core.version>
+    	<swagger-parser.version>2.0.30</swagger-parser.version>
+    	<easyrandom.version>4.0.0</easyrandom.version>
+    	<openapi-generator.version>5.4.0</openapi-generator.version>
+    	<springfox.version>2.9.2</springfox.version>
+  	</properties>
+	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -39,8 +49,57 @@
 				<artifactId>subscriptionservice-ws</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+      			<groupId>org.mapstruct</groupId>
+      			<artifactId>mapstruct</artifactId>
+      			<version>${mapstruct.version}</version>
+    		</dependency>
+    		<dependency>
+      			<groupId>io.swagger</groupId>
+      			<artifactId>swagger-annotations</artifactId>
+      			<version>${swagger-anotation.version}</version>
+    		</dependency>
+    		<dependency>
+			    <groupId>io.swagger.core.v3</groupId>
+			    <artifactId>swagger-core</artifactId>
+			    <version>${swagger-core.version}</version>
+			</dependency>
+
+			<dependency>
+			  <groupId>io.swagger.parser.v3</groupId>
+			  <artifactId>swagger-parser</artifactId>
+			  <version>${swagger-parser.version}</version>
+			</dependency>
+
+    		<dependency>
+			    <groupId>org.jeasy</groupId>
+			    <artifactId>easy-random-core</artifactId>
+			    <version>${easyrandom.version}</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>org.openapitools</groupId>
+			    <artifactId>openapi-generator</artifactId>
+			    <version>${openapi-generator.version}</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>io.springfox</groupId>
+			    <artifactId>springfox-swagger2</artifactId>
+			    <version>${springfox.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </plugin>
+    </plugins>
+
+    </build>
 	<modules>
         <module>subscriptionservice-api-model</module>
         <module>subscriptionservice-api-rest</module>

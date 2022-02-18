@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>subscriptionservice-ws</artifactId>
 	<name>${project.groupId}:${project.artifactId}</name>
-	
+	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -25,12 +25,29 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>subscriptionservice-model</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jeasy</groupId>
+			<artifactId>easy-random-core</artifactId>
+		</dependency>
 	</dependencies>
-
+<build>
+</build>
 </project>
